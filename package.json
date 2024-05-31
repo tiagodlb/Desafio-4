@@ -1,0 +1,21 @@
+{
+  "name": "desafio-4",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "To be added",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagodlb/Desafio-4.git"
+  },
+  "keywords": [],
+  "author": "Tiago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiagodlb/Desafio-4/issues"
+  },
+  "homepage": "https://github.com/tiagodlb/Desafio-4#readme"
+}
