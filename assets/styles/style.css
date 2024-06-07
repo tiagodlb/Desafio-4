@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    color: #080808;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    background: #F5F7FA;
+}
+
+.container nav{
+    background: #fff;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo_imgs{
+    padding-top: 6px;
+    padding-bottom: 6.7px;
+    display: flex;
+    padding-left: 100px;
+    /* justify-content: space-between; */
+}
+
+.logo{
+    width: 100px;
+}
+
+.logo_galinha{
+    width: 35px;
+    height: 39px;
+}
+
+.btn{
+    text-decoration: none;
+    color: #fff;
+    /* font-family: ; */
+}
+
+.play_now{
+    /* display: none; */
+    background: #4CAF4F;
+    color: #fff;
+    margin-right: 100px;
+    padding: 9.75px 22px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.header-content{
+    padding: 10px 11%;
+    display: flex;
+}
+
+.header-text{   
+    margin-top: 20%;
+    font-size: 44px;
+}
+
+.header-text h1{
+    color: #4D4D4D;
+}
+
+.header-text p{
+    color: #717171;
+    font-size: 11px;
+}
+
+.header-img{
+    display: flex;
+    
+}
+
+.header-img img{
+    width: 320px;
+}
