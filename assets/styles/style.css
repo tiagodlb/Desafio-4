@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -33,6 +36,14 @@ nav{
     flex-wrap: wrap;
 }
 
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #4D4D4D;
+}
+
 .logo_imgs{
     padding-top: 6px;
     padding-bottom: 6.7px;
@@ -50,28 +61,34 @@ nav{
     height: 39px;
 }
 
-.btn{
-    text-decoration: none;
-    color: #fff;
-    /* font-family: ; */
+.nav_links_and_button{
+    display: flex;
+    padding: 10px 4%;
 }
 
 .play_now{
-    /* display: none; */
+    /* gap: 3px; */
+    justify-content: space-between;
     background: #4CAF4F;
     color: #fff;
-    margin-right: 100px;
     padding: 9.75px 22px;
-    border-radius: 8px;
-    border: none;
+    border-radius: 4px;
     margin-right: 100px;
+    border: none;
+    }
+
+.arrow{
+    height: 11px;
+    padding-left: 4px;
+    padding-bottom: 2px;
+}
+    
+.btn{
+    text-decoration: none;
+    color: #fff;
+    font-family: "Inter", sans-serif;
 }
 
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
 
 .header-content{
     padding: 10px 11%;
