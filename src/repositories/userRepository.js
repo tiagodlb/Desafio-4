@@ -17,3 +17,7 @@ export async function insertUser(user) {
         data: user
     })
 }
+
+export async function findUsers() {
+    return prisma.user.findMany()
+}
