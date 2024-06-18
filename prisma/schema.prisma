@@ -14,7 +14,7 @@ model User {
   name     String
   nickname String   @unique
   password String
-  birthday DateTime
+  birthday DateTime @db.Date
 
   @@map("user")
 }
