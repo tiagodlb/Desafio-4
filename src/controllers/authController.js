@@ -1,7 +1,6 @@
 import authService from "../services/authService.js";
 
 export async function signUp(req, res) {
-
     /*
     {
         name: "João",
@@ -20,12 +19,13 @@ export async function signUp(req, res) {
 }
 
 export async function signIn(req, res) {
-    try {
-        const user = req.body;
-        const { resposta, token } = await authService.login(user);
-        res.status(200).send({ resposta, token })
-    } catch(error){
-        res.status(401).json({ error: error.message });
-    }
-    
+    // Pega o body da requisição
+    const user = req.body;
+
+    // Joga para a service fazer o login
+    const { resposta, token } = await authService.login(user);
+
+    // Envia código HTTP 200 e a resposta + token JWT
+    res.status(200).send({ resposta, token })
+
 }
