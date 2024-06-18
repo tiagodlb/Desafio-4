@@ -1,18 +1,22 @@
-import jwt from "jsonwebtoken"; //É a biblioteca usada para gerar e verificar tokens JWT
+import jwt from "jsonwebtoken";
+import authService from "../services/authService";
 
-export const authenticateTokenMiddleware = (req, res, next) => {
-    const authHeader = req.headers['authorization']; //extrai o header autho da requis HTTP
-    const token = authHeader && authHeader.split(' ')[1]; //O token JWT é esperado no formato "Bearer TOKEN", então temos o split(' ') para dividir o header e pegar apenas o token.
+import { unauthorizedError } from "../utils/errorUtils";
 
-    if (!token) { //se n houver o token responde com 401
-        return res.sendStatus(401); // Unauthorized
-    }
+export async function ensureAuthenticatedMiddleware(req, res, next) {
+    const authorization = req.headers["authorization"];
+    if (!authorization) throw unauthorizedError("Missing authorization header");
 
-    jwt.verify(token, 'secret_key', (err, user) => { //tem q ser a chave secreta que está sendo usada para assinar os tokens JWT
-        if (err) {
-            return res.sendStatus(403); // Forbidden
-        }
-        req.user = user; 
+    const token = authorization.replace("Bearer ", "");
+    if (!token) throw unauthorizedError("Missing token");
+
+    try {
+        const JWT_SECRET = process.env.JWT_SECRET;
+        const { userId } = parseInt(jwt.verify(token, JWT_SECRET));
+        const user = await authService.findUserById(userId);
+        res.locals.user = user;
         next();
-    });
-};
+    } catch {
+        throw unauthorizedError("Invalid token");
+    }
+}
