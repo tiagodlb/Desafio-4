@@ -1,42 +1,43 @@
 import * as userRepository from '../repositories/userRepository.js';
 import {
     conflictError,
+    notFoundError,
     unauthorizedError
 } from '../utils/errorUtils.js';
-
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 async function createUser(user) {
-    console.log(user);
     /* Checa no banco se o usuário existe */
     const existingUser = await userRepository.findUserByEmail(user.email);
     if (existingUser) {
         throw conflictError();
     }
 
-    await userRepository.insertUser({ ...user });
+    const SALT = 10;
+    const hashedPassword = bcrypt.hashSync(user.password, SALT);
+
+    await userRepository.insertUser({ ...user, password: hashedPassword });
 }
 
-async function login({ email, password }) {
-    const user = await getUserOrFail({ email });
-    if (!await bcrypt.compare(password, user.password)) {
-        throw new Error('Senha inválida');
+async function login(login) {
+    const user = await getUserOrFail(login);
+    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET);
+
+    return token;
+}
+
+async function getUserOrFail(login) {
+    const user = await userRepository.findUserByEmail(login.email);
+    if (!user) throw unauthorizedError("Credenciais inválidas.");
+
+    const isPasswordValid = bcrypt.compareSync(login.password, user.password)
+    if (!isPasswordValid) {
+        throw unauthorizedError("Credenciais inválidas.");
     }
-    const token = generateToken(user);
-    return { user, token };
-}
-
-async function getUserOrFail({ email }) {
-    const user = await userRepository.findUserByEmail(email);
-    if (!user) throw new Error('Email inválido');
     return user;
 }
 
-function generateToken(user) {
-    const payload = { id: user.id, email: user.email };
-    return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRATION });
-}
 const authService = {
     createUser,
     login,

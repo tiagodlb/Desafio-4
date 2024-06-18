@@ -14,7 +14,13 @@ export async function findUserByEmail(email) {
 
 export async function insertUser(user) {
     return prisma.user.create({
-        data: user
+        data: {
+            email: user.email,
+            name: user.name,
+            nickname: user.nickname,
+            password: user.password,
+            birthday: new Date(user.birthday).toISOString()
+        }
     })
 }
 

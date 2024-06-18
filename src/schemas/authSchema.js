@@ -13,15 +13,15 @@ import Joi from "joi";
 
 /* Cadastro */
 export const signUpSchema = Joi.object({
-    email: Joi.string().required(),
-    name: Joi.string().required(),
-    nickname: Joi.string().required(),
-    password: Joi.string().required(),
-    birthday: Joi.string().required()
+  email: Joi.string().required(),
+  name: Joi.string().required(),
+  nickname: Joi.string().required(),
+  password: Joi.string().required(),
+  birthday: Joi.date().required()
 })
 
 /* Login */
 export const signInSchema = Joi.object({
-    email: Joi.string().required(),
-    password: Joi.string().required()
+  email: Joi.string().required(),
+  password: Joi.string().required()
 });
