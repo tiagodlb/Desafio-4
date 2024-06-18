@@ -5,9 +5,12 @@
   "description": "To be added",
   "main": "index.js",
   "scripts": {
-    "test": "dotenv -e .env.test prisma migrate dev && dotenv -e .env.test prisma db seed && dotenv -e .env.test jest --no-cache",
+    "test": "prisma migrate dev && prisma db seed && jest --no-cache",
     "dev": "nodemon src/server.js",
-    "start": "node dist/server.js"
+    "start": "node src/server.js"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   },
   "repository": {
     "type": "git",
