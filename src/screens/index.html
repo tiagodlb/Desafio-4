@@ -1,49 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/styles/style.css">
-    <script src="https://kit.fontawesome.com/9579446d3e.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div id="header">
-        <div class="container">
-            <!-- COMEÇO DA NAV -->
-            <nav>
-                <div class="logo_imgs">
-                    <img src="/assets/imgs/Icon.svg" alt="Galinha" class="logo_galinha">
-                    <img src="/assets/imgs/logo.png" alt="Logo do site" class="logo">
-                </div>
-                <div class="nav_links_and_button">
-                    <ul id="sidemenu">
-                        <li><a href="#header"></a>Home</li>
-                        <li><a href="#header"></a>Atualizações</li>
-                        <li><a href="#header"></a>Comunidade</li>
-                        <li><a href="#header"></a>FAQ</li>
-                        <li><a href="#header"></a>Investidores</li>
-                    </ul>
-                    <div class="play_now">
-                        <a href="#" class="btn">JOGUE AGORA</a>
-                        <img src="/assets/imgs/Down.svg" alt="Seta apontando para a direita" class="arrow">
-                    </div>
-                </div>
-            </nav>
-            <!-- FIM DA NAV -->
-
-            <div class="header-content">
-                <div class="header-text">
-                    <h1>NOME DO JOGO</h1>
-                    <p>Bem-vindo ao nosso mundo de fazendas, cultivo e comunidade! Aventure-se pelo  mundo da agricultura orgânica no Maranhão, plante suas colheitas e faça amizades com outros agricultores.</p>
-                </div>
-                <div class="header-img">
-                    <img src="/assets/imgs/Ilustracao.svg" alt="">
-                </div>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="/assets/styles/style.css" />
+      <link rel="stylesheet" href="/assets/styles/menu.css" />
+      <script
+         src="https://kit.fontawesome.com/9579446d3e.js"
+         crossorigin="anonymous"
+      ></script>
+      <link
+         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+         rel="stylesheet"
+      />
+   </head>
+   <body>
+      <header class="header">
+         <nav class="nav_bar">
+            <div class="div_logo">
+               <img
+                  src="/assets/imgs/Icon.svg"
+                  alt="Galinha"
+                  class="logo_galinha"
+               />
+               <img
+                  src="/assets/imgs/logo.png"
+                  alt="Logo do site"
+                  class="logo"
+               />
             </div>
-            <button>JOGUE DE GRAÇA/BAIXE GRATUITAMENTE/INICIE SUA JORNADA</button>
-        </div>
-    </div>
+            <button class="hamburger"></button>
+            <div class="ul_links_and_button">
+               <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#atualizacoes">Atualizações</a></li>
+                  <li><a href="#comunidade">Comunidade</a></li>
+                  <li><a href="#faq">FAQ</a></li>
+                  <li><a href="#investidores">Investidores</a></li>
+               </ul>
+               <div class="play_now">
+                  <a href="#">JOGUE AGORA</a>
+               </div>
+            </div>
+         </nav>
+      </header>
 
-</body>
+      <!-- conteudo principal -->
+      <main class="content_main" id="home">
+         <div class="content_left">
+            <div class="content_text">
+               <h1>NOME DO JOGO</h1>
+               <p>
+                  Bem-vindo ao nosso mundo de fazendas, cultivo e comunidade!
+                  Aventure-se pelo mundo da agricultura orgânica no Maranhão,
+                  plante suas colheitas e faça amizades com outros agricultores.
+               </p>
+            </div>
+            <button>
+               JOGUE DE GRAÇA/BAIXE GRATUITAMENTE/INICIE SUA JORNADA
+            </button>
+         </div>
+         <div class="content_img">
+            <img src="/assets/imgs/Ilustracao.svg" alt="" />
+         </div>
+      </main>
+
+      <!-- atualizacoes -->
+      <section class="atualizacoes" id="comunidade">
+         <h2>Faça seu cadastro agora e ganhe recompensas.</h2>
+         <p>Não perca a chance de receber bônus no jogo, cadastra-se agora.</p>
+
+         <div class="div_bonus">
+            <div class="box_bonus">
+               <i class="bx bx-face"></i>
+               <h2>Bônus 1</h2>
+               <p>Bônus por recomendar para amigos.</p>
+            </div>
+            <div class="box_bonus">
+               <i class="bx bxs-flag-checkered"></i>
+               <h2>Bônus 2</h2>
+               <p>Bônus de avanço de nível.</p>
+            </div>
+            <div class="box_bonus">
+               <i class="bx bxs-store"></i>
+               <h2>Bônus 3</h2>
+               <p>Bônus de produtos raros.</p>
+            </div>
+         </div>
+
+         <div class="media_social">
+            <h2>Redes Sociais</h2>
+            <p>
+               Siga-nos para não perder nenhuma novidade./Seja o primeiro a
+               estar por dentro das nossas atualizações.
+            </p>
+            <div class="icons_media">
+               <a href="#">
+                  <i class="bx bxl-instagram" style="color: #a50060"></i>
+               </a>
+               <a href="#">
+                  <i class="bx bxl-discord-alt" style="color: #00a2ff"></i>
+               </a>
+               <a href="#">
+                  <i class="bx bxl-facebook" style="color: #00a2ff"></i>
+               </a>
+               <a href="#">
+                  <i class="bx bxl-linkedin-square" style="color: #0076bb"></i>
+               </a>
+               <a href="#">
+                  <i class="bx bxl-tiktok"></i>
+               </a>
+               <a href="#">
+                  <i class="bx bxl-youtube" style="color: #ff0000"></i>
+               </a>
+            </div>
+         </div>
+
+         <div class="descubra_mais" id="descubra_mais">
+            <h2>Descubra Mais (Galeria de Imagens do Jogo)</h2>
+            <p>
+               Se você gosta de se aventurar em novas jornadas e descobrir sobre
+               novas experiências ou se estava procurando um jogo apenas para se
+               divertir e passar seu tempo, nesse playtime game você encontrará
+               sua satisfação.
+            </p>
+
+            <div class="galeria_imagens">
+               <div class="box_img">
+                  <img src="/assets/imgs/Ilustracao.svg" alt="" />
+                  <div class="legenda">
+                     <p>LEGENDA ESTIMULANTE</p>
+                     <a href="#">COMECE A JOGAR</a>
+                     <i
+                        class="bx bx-right-arrow-alt"
+                        style="color: #4caf4f"
+                     ></i>
+                  </div>
+               </div>
+
+               <div class="box_img">
+                  <img src="/assets/imgs/Ilustracao.svg" alt="" />
+                  <div class="legenda">
+                     <p>LEGENDA ESTIMULANTE</p>
+                     <a href="#">COMECE A JOGAR</a>
+                     <i
+                        class="bx bx-right-arrow-alt"
+                        style="color: #4caf4f"
+                     ></i>
+                  </div>
+               </div>
+
+               <div class="box_img">
+                  <img src="/assets/imgs/Ilustracao.svg" alt="" />
+                  <div class="legenda">
+                     <p>LEGENDA ESTIMULANTE</p>
+                     <a href="#">COMECE A JOGAR</a>
+                     <i
+                        class="bx bx-right-arrow-alt"
+                        style="color: #4caf4f"
+                     ></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="div_download" id="fag">
+         <img src="/assets/imgs/Ilustracao.svg" alt="" />
+         <div class="text_download">
+            <h2>Jogue a sua maneira e no seu tempo</h2>
+            <p>
+               Divirta-se em uma série de cenários, escolha os produtos que
+               deseja plantar e itens que aprimorem o seu cultivo orgânico e
+               alcance os consumidores.
+            </p>
+            <a class="btn_download" href="#"
+               >FAÇA O DOWNLOAD
+               <i class="bx bx-right-arrow-alt" style="color: #ffffff"></i
+            ></a>
+         </div>
+      </section>
+
+      <footer class="footer" id="investidores">
+         <div class="logo_copyright">
+            <img src="/assets/imgs/logo.png" alt="" />
+            <p>
+               Copyright © 2024 Inova Maranhão <br />
+               Todos os direitos reservados.
+            </p>
+         </div>
+
+         <div class="links_and_form">
+            <ul class="ul_links_time">
+               <h2>Time10 - Trilhas</h2>
+               <li><a href="#">Back End</a></li>
+               <li><a href="#">Dados</a></li>
+               <li><a href="#">Front End</a></li>
+               <li><a href="#">Jogos</a></li>
+               <li><a href="#">UX Design</a></li>
+            </ul>
+
+            <ul class="ul_links_suporte">
+               <h2>Suporte</h2>
+               <li><a href="#">Central de Ajuda</a></li>
+               <li><a href="#">Termos de Serviços</a></li>
+               <li><a href="#">Política de Privacidade</a></li>
+               <li><a href="#">Notas de Atualização</a></li>
+               <li><a href="#">Suporte</a></li>
+            </ul>
+
+            <form class="form" action="">
+               <h2>Cadastre-se</h2>
+               <input type="text" placeholder="Nome" required />
+               <input type="email" placeholder="E-mail" required />
+               <button type="submit">
+                  Enviar <i class="bx bx-send" style="color: #ffffff"></i>
+               </button>
+            </form>
+         </div>
+      </footer>
+
+      <script src="../app.js"></script>
+   </body>
 </html>

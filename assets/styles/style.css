@@ -66,16 +66,16 @@ body {
    align-items: center;
 }
 
-.content_left > button::after {
+/* .content_left > button::after {
    content: "";
    position: absolute;
    width: 100px;
    height: 0.2rem;
    background-color: #fff;
    border-radius: 10px;
-}
+} */
 
-.content_left > button::before {
+/* .content_left > button::before {
    content: "";
    position: absolute;
    width: 0;
@@ -84,13 +84,13 @@ body {
    border-left: 10px solid transparent;
    border-right: 10px solid #fff;
    transform: rotate(-47deg);
-}
+} */
 
-.content_left > button::after,
+/* .content_left > button::after,
 .content_left > button::before {
    top: 1.5rem;
    right: 3rem;
-}
+} */
 
 /* atualizações */
 .atualizacoes {
