@@ -1,6 +1,6 @@
 .header {
    width: 100%;
-   padding: 10px 4%;
+   padding: 10px 10%;
    background-color: #fff;
    box-shadow: 0 0 10px #26323818;
    position: fixed;
@@ -12,13 +12,11 @@
    justify-content: space-between;
 }
 
-.div_logo {
-   width: 10%;
-   display: flex;
-}
-
-.div_logo img {
+.logo {
+   margin: 0;
+   /* position: absolute; */
    width: 100%;
+   overflow: hidden;
 }
 
 .ul_links_and_button {
@@ -39,6 +37,22 @@
    font-size: 0.9em;
    font-family: var(--font);
    text-decoration: none;
+   position: relative;
+}
+
+.ul_links_and_button ul li a::after{
+   content: '';
+   width: 0;
+   height: 3px;
+   background: #4caf4f;
+   position: absolute;
+   left: 0;
+   bottom: -6px;
+   transition: 0.2s;
+}
+
+nav ul li a:hover::after{
+   width: 100%;
 }
 
 .ul_links_and_button .play_now {
@@ -60,9 +74,9 @@
    background-color: #263238;
 }
 
-.ul_links_and_button ul li a:hover {
+/* .ul_links_and_button ul li a:hover {
    color: #263238;
-}
+} */
 
 .hamburger {
    display: none;
