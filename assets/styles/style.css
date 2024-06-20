@@ -54,6 +54,10 @@ body {
    font-family: var(--font);
    padding: 1.2rem 0;
 }
+.botao-jogar a{
+   text-decoration: none;
+   color: var(--color-bg1)
+}
 
 .botao-jogar:hover{
    background: #075b0a;
@@ -290,6 +294,9 @@ body {
    background-color: var(--color-black);
 }
 
+.logo_copyright img{
+   width: 100%;
+}
 .footer > .logo_copyright > p {
    color: #fff;
    font-size: 0.8em;
