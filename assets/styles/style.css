@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
 
 * {
    margin: 0;
@@ -18,6 +20,7 @@ html {
    --color-bg2: #fff;
    --text-color: #4d4d4d;
    --font: "Inter", sans-serif;
+   --font-header: "Chewy", system-ui;
 }
 
 /* Geral */
@@ -29,7 +32,7 @@ body {
 /* conteudo principal */
 .content_main {
    width: 100%;
-   height: 100vh;
+   height: 70vh;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -38,21 +41,29 @@ body {
 }
 
 .content_text > h1 {
-   color: #4d4d4d;
+   color: #43A046;
    font-size: 3em;
-   font-family: var(--font);
+   font-family: var(--font-header);
+   text-shadow:#000 1px -1px 2px, #000 -1px 1px 2px, #000 1px 1px 2px, #000 -1px -1px 2px
 }
 
 .content_text > p {
-   width: 80%;
+   width: 45%;
    color: #717171;
    font-size: 1em;
    font-family: var(--font);
    padding: 1.2rem 0;
 }
+.botao-jogar a{
+   text-decoration: none;
+   color: var(--color-bg1)
+}
+
+.botao-jogar:hover{
+   background: #075b0a;
+}
 
 .content_left > button {
-   width: 80%;
    color: #fff;
    background-color: var(--color-green);
    text-align: left;
@@ -66,16 +77,26 @@ body {
    align-items: center;
 }
 
-.content_left > button::after {
+.content_img {
+   width: 100%;
+   height: 50%;
+}
+
+.content_img img{
+   width: 100%;
+   height: 100%;
+}
+
+/* .content_left > button::after {
    content: "";
    position: absolute;
    width: 100px;
    height: 0.2rem;
    background-color: #fff;
    border-radius: 10px;
-}
+} */
 
-.content_left > button::before {
+/* .content_left > button::before {
    content: "";
    position: absolute;
    width: 0;
@@ -84,13 +105,13 @@ body {
    border-left: 10px solid transparent;
    border-right: 10px solid #fff;
    transform: rotate(-47deg);
-}
+} */
 
-.content_left > button::after,
+/* .content_left > button::after,
 .content_left > button::before {
    top: 1.5rem;
    right: 3rem;
-}
+} */
 
 /* atualizações */
 .atualizacoes {
@@ -138,7 +159,7 @@ body {
 .descubra_mais > h2,
 .text_download > h2 {
    color: var(--text-color);
-   font-size: 1.2em;
+   font-size: 2rem;
    padding-bottom: 0.3rem;
    font-family: var(--font);
 }
@@ -153,6 +174,15 @@ body {
 /* redes sociais */
 .media_social {
    width: 64%;
+}
+
+.icons_media {
+   font-size: 33px;
+   transition: transform 0.5s, transform 0.5s;
+}
+
+.icons_media a:hover{
+   transform: translateY(-10px);
 }
 
 .media_social > .icons_media {
@@ -247,7 +277,7 @@ body {
 .text_download > p {
    text-align: center;
    color: var(--text-color);
-   font-size: 0.8em;
+   font-size: 1em;
    font-family: var(--font);
    padding: 0.5em 0 2.5rem 0;
 }
@@ -259,6 +289,11 @@ body {
    font-family: var(--font);
    padding: 15px 5%;
    text-decoration: none;
+   border-radius: 8px;
+}
+
+.btn_download:hover{
+   background: #0d7b10;
 }
 
 /* footer */
@@ -269,6 +304,9 @@ body {
    background-color: var(--color-black);
 }
 
+.logo_copyright img{
+   width: 100%;
+}
 .footer > .logo_copyright > p {
    color: #fff;
    font-size: 0.8em;

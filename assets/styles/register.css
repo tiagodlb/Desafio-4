@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #080808;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-green: #4caf4f;
+    --color-green-dark: #6cdc70;
+    --color-black: #263238;
+    --color-bg1: #f5f7fa; 
+    --color-bg2: #fff;
+    --text-color: #4d4d4d;
+    --font: "Inter", sans-serif;
+    --font-header: "Chewy", system-ui;
+    --font-register: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.topo {
+    width: 100%;
+    padding: 10px 10%;
+    background-color: #fff;
+    box-shadow: 0 0 10px #26323818;
+ }
+
+.registro_topo h1{
+    font-size: 50px;
+    color: var(--color-green);
+    font-family: var(--font-register);
+    font-weight: 500;
+}
+
+.registro_topo h3{
+    text-align: center;
+    color: var(--color-green);
+    font-family: var(--font-register);
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.registro_topo a{
+    text-decoration: none;
+    color: var(--color-green);
+}
+
+.registro_topo a:hover{
+    color: var(--color-black);
+}
+
+.conteudo_principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5% 10%;
+}
+
+.conteudo_principal form{
+    width: 100%;
+    padding: 0 37%;
+}
+
+.conteudo_principal label{
+    padding-left: 4px;
+}
+
+.nome_label{
+    color: var(--color-green);
+    font-family: var(--font-register);
+    font-weight: 500;
+}
+
+input {
+    border: 1px solid #4caf4f;
+    padding: 15px;
+    width: 100%;
+    margin: 5px;
+}
+
+input[type="date"] {
+    width: 100%;
+}
+
+.botao_enviar{
+    font-family: var(--font-register);
+    font-weight: 500;
+    color: var(--color-bg1);
+    background: var(--color-green);
+    padding: 10px;
+    margin: 10% 0 0 25%;
+    width: 50%;
+    border: none;
+    border-radius: 8px;
+}
+
+.botao_enviar:hover{
+    background: var(--color-green-dark);
+}
