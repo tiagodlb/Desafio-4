@@ -21,6 +21,7 @@ async function findUsers() {
     return mappedUser;
 }
 
+
 const userService = {
     findUserById,
     findUsers
