@@ -10,11 +10,17 @@ async function findUserById(id) {
 
 async function findUsers() {
     const users = await userRepository.findUsers();
-    let mappedUser = users.forEach((user) => {
-        return { "id": user.id, "email": user.email, "nickname": user.nickname, "birthday": user.birthday };
+    let mappedUser = users.map((user) => {
+        return {
+            "id": user.id,
+            "email": user.email,
+            "nickname": user.nickname,
+            "birthday": user.birthday
+        };
     })
     return mappedUser;
 }
+
 
 const userService = {
     findUserById,
