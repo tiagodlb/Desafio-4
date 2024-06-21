@@ -32,6 +32,7 @@
   -  Fábrica para testes ( TO-DO ) com Jest
 
 ## :rocket: Routes
+- Link da API: https://desafio-4.onrender.com
 
 - As respostas padrões são:
   - `200` - Successful GET request || Sucesso na requisição GET 
