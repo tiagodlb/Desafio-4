@@ -2,10 +2,14 @@ import * as userRepository from '../repositories/userRepository.js';
 import { notFoundError } from '../utils/errorUtils.js';
 
 async function findUserById(id) {
-    const user = await userRepository.findById(id);
-    if (!user) throw notFoundError("Usuário não encontrado");
+    try {
+        const user = await userRepository.findById(id).catch();
+        if (!user) throw notFoundError("Usuário não encontrado");
 
-    return { "id": user.id, "email": user.email, "nickname": user.nickname, "birthday": user.birthday };
+        return { "id": user.id, "email": user.email, "nickname": user.nickname, "birthday": user.birthday };
+    } catch (error) {
+        console.error(error.message);
+    }
 }
 
 async function findUsers() {
