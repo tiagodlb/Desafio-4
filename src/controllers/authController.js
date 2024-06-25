@@ -23,9 +23,9 @@ export async function signIn(req, res) {
     const user = req.body;
 
     // Joga para a service fazer o login
-    const { resposta, token } = await authService.login(user);
+    const { token } = await authService.login(user);
 
     // Envia código HTTP 200 OK e a resposta + token JWT
-    res.status(200).send({ resposta, token })
+    res.status(200).send({ token })
 
 }
