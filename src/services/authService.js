@@ -25,10 +25,15 @@ async function createUser(user) {
 }
 
 async function login(login) {
-    const user = await getUserOrFail(login);
-    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET);
+    try {
+        const user = await getUserOrFail(login);
+        if (!user) throw unauthorizedError("Credenciais inválidas.");
+        const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET);
 
-    return token;
+        return token;
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 async function getUserOrFail(login) {
