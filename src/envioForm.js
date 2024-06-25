@@ -5,17 +5,16 @@ document
 
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
-      console.log("Body:", JSON.stringify({ email, password }));
 
       try {
-        const response = await fetch("https://desafio-4.onrender.com/signin", {
+         const response = await fetch("https://desafio-4.onrender.com/signin", {
             method: "POST",
             headers: {
                "Content-Type": "application/json",
             },
             body: JSON.stringify({ email, password }),
          });
-         
+
 
          if (!response.ok) {
             throw new Error("Erro na requisição");
