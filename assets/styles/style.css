@@ -447,12 +447,14 @@ body {
 
    .media_social > .icons_media {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
       padding: 2rem 0 3rem 0;
    }
 
    .media_social > .icons_media > a > i {
-      font-size: 2.4em;
+      font-size: 1.5em;
    }
 
    /* descubra mais */
