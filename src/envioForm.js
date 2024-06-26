@@ -28,7 +28,7 @@ document
    });
 
 document
-   .getElementById("formLogin")
+   .getElementById("formRegister")
    .addEventListener("submit", async function (event) {
       event.preventDefault();
 
