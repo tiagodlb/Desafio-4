@@ -1,6 +1,6 @@
 .header {
    width: 100%;
-   padding: 10px 10%;
+   padding: 5px 10%;
    background-color: #fff;
    box-shadow: 0 0 10px #26323818;
    position: fixed;
@@ -9,6 +9,7 @@
 
 .nav_bar {
    display: flex;
+   align-items: center;
    justify-content: space-between;
 }
 
@@ -40,8 +41,8 @@
    position: relative;
 }
 
-.ul_links_and_button ul li a::after{
-   content: '';
+.ul_links_and_button ul li a::after {
+   content: "";
    width: 0;
    height: 3px;
    background: #4caf4f;
@@ -51,7 +52,7 @@
    transition: 0.2s;
 }
 
-nav ul li a:hover::after{
+nav ul li a:hover::after {
    width: 100%;
 }
 
@@ -93,7 +94,7 @@ nav ul li a:hover::after{
    width: 30px;
    height: 3px;
    background-color: #000000;
-   margin-top: 5px;
+   margin-top: -14px;
    position: relative;
    transition: 0.3s;
 }
@@ -126,7 +127,7 @@ nav ul li a:hover::after{
    }
 
    .ul_links_and_button ul li a {
-    color: #fff;
+      color: #fff;
       font-size: 24px;
       opacity: 0;
    }
